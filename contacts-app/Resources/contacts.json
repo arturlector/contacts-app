@@ -1,0 +1,118 @@
+{
+"success" : true,
+"data" : {
+    "items" : [
+    {
+        "contactID": 1,
+        "firstName": "Joe",
+        "lastName": "Black",
+        "phoneNumber": "+71231231212",
+        "streetAddress1": "Pushkina str 5",
+        "streetAddress2": "apt 1",
+        "city": "Kazan",
+        "state": "Republic of Tatarstan",
+        "zipCode": "420001"
+    },
+    {
+        "contactID": 2,
+        "firstName": "Joe",
+        "lastName": "Black",
+        "phoneNumber": "+71231231212",
+        "streetAddress1": "Pushkina str 5",
+        "streetAddress2": "apt 1",
+        "city": "Kazan",
+        "state": "Republic of Tatarstan",
+        "zipCode": "420001"
+    },
+    {
+        "contactID": 3,
+        "firstName": "Joe",
+        "lastName": "Black",
+        "phoneNumber": "+71231231212",
+        "streetAddress1": "Pushkina str 5",
+        "streetAddress2": "apt 1",
+        "city": "Kazan",
+        "state": "Republic of Tatarstan",
+        "zipCode": "420001"
+    },
+    {
+        "contactID": 4,
+        "firstName": "Joe",
+        "lastName": "Black",
+        "phoneNumber": "+71231231212",
+        "streetAddress1": "Pushkina str 5",
+        "streetAddress2": "apt 1",
+        "city": "Kazan",
+        "state": "Republic of Tatarstan",
+        "zipCode": "420001"
+    },
+    {
+        "contactID": 5,
+        "firstName": "Joe",
+        "lastName": "Black",
+        "phoneNumber": "+71231231212",
+        "streetAddress1": "Pushkina str 5",
+        "streetAddress2": "apt 1",
+        "city": "Kazan",
+        "state": "Republic of Tatarstan",
+        "zipCode": "420001"
+    },
+    {
+        "contactID": 6,
+        "firstName": "Joe",
+        "lastName": "Black",
+        "phoneNumber": "+71231231212",
+        "streetAddress1": "Pushkina str 5",
+        "streetAddress2": "apt 1",
+        "city": "Kazan",
+        "state": "Republic of Tatarstan",
+        "zipCode": "420001"
+    },
+    {
+        "contactID": 7,
+        "firstName": "Joe",
+        "lastName": "Black",
+        "phoneNumber": "+71231231212",
+        "streetAddress1": "Pushkina str 5",
+        "streetAddress2": "apt 1",
+        "city": "Kazan",
+        "state": "Republic of Tatarstan",
+        "zipCode": "420001"
+    },
+    {
+        "contactID": 8,
+        "firstName": "Joe",
+        "lastName": "Black",
+        "phoneNumber": "+71231231212",
+        "streetAddress1": "Pushkina str 5",
+        "streetAddress2": "apt 1",
+        "city": "Kazan",
+        "state": "Republic of Tatarstan",
+        "zipCode": "420001"
+    },
+    {
+        "contactID": 9,
+        "firstName": "Joe",
+        "lastName": "Black",
+        "phoneNumber": "+71231231212",
+        "streetAddress1": "Pushkina str 5",
+        "streetAddress2": "apt 1",
+        "city": "Kazan",
+        "state": "Republic of Tatarstan",
+        "zipCode": "420001"
+    },
+    {
+        "contactID": 10,
+        "firstName": "Joe",
+        "lastName": "Black",
+        "phoneNumber": "+71231231212",
+        "streetAddress1": "Pushkina str 5",
+        "streetAddress2": "apt 1",
+        "city": "Kazan",
+        "state": "Republic of Tatarstan",
+        "zipCode": "420001"
+    },
+    ],
+    "total" : 1,
+}
+}
