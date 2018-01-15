@@ -5,7 +5,6 @@
     {
         "contactID": 1,
         "firstName": "Joe",
-        "lastName": "Black",
         "phoneNumber": "+71231231212",
         "streetAddress1": "Pushkina str 5",
         "streetAddress2": "apt 1",

@@ -9,31 +9,6 @@
 import LBTAComponents
 import SwiftyJSON
 
-class ContactCell: DatasourceCell {
-   
-    override var datasourceItem: Any? {
-        didSet {
-            guard let contact = datasourceItem as? Contact else { return }
-            
-            nameLabel.text = (contact.firstName != nil ? contact.firstName! : "") + " " + (contact.lastName != nil ? contact.lastName! : "")
-        }
-    }
-    
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
-    
-    override func setupViews() {
-        
-        backgroundColor = .white
-        
-        addSubview(nameLabel)
-        
-        nameLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 20, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
-    }
-}
-
 class ContactsDatasource: Datasource {
 
     var contacts: [Contact] = []

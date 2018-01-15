@@ -18,8 +18,8 @@
 		8E7D45A1200BBE7000EB1437 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D45A0200BBE7000EB1437 /* ContactsController.swift */; };
 		8E7D45A3200BBE8100EB1437 /* ContactsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D45A2200BBE8100EB1437 /* ContactsDatasource.swift */; };
 		8E7D45A8200BD04700EB1437 /* EditContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D45A7200BD04700EB1437 /* EditContactController.swift */; };
-		8E7D45AA200BD06300EB1437 /* EditContactDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D45A9200BD06300EB1437 /* EditContactDatasource.swift */; };
 		8E7D45AC200BE47400EB1437 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D45AB200BE47400EB1437 /* Contact.swift */; };
+		8E7D45AE200C1CAE00EB1437 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D45AD200C1CAE00EB1437 /* ContactCell.swift */; };
 		E1345714AFD0427CDA967B74 /* Pods_contacts_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF30617B2E49CA0BFFD1F6B /* Pods_contacts_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +59,8 @@
 		8E7D45A0200BBE7000EB1437 /* ContactsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
 		8E7D45A2200BBE8100EB1437 /* ContactsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDatasource.swift; sourceTree = "<group>"; };
 		8E7D45A7200BD04700EB1437 /* EditContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactController.swift; sourceTree = "<group>"; };
-		8E7D45A9200BD06300EB1437 /* EditContactDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactDatasource.swift; sourceTree = "<group>"; };
 		8E7D45AB200BE47400EB1437 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		8E7D45AD200C1CAE00EB1437 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		99CE80184091AEF80B794595 /* Pods-contacts-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contacts-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-contacts-app/Pods-contacts-app.debug.xcconfig"; sourceTree = "<group>"; };
 		FDF30617B2E49CA0BFFD1F6B /* Pods_contacts_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_contacts_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -161,6 +161,7 @@
 				8E7D45A0200BBE7000EB1437 /* ContactsController.swift */,
 				8E7D45A2200BBE8100EB1437 /* ContactsDatasource.swift */,
 				8E7D45AB200BE47400EB1437 /* Contact.swift */,
+				8E7D45AD200C1CAE00EB1437 /* ContactCell.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -169,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				8E7D45A7200BD04700EB1437 /* EditContactController.swift */,
-				8E7D45A9200BD06300EB1437 /* EditContactDatasource.swift */,
 			);
 			path = DetailContact;
 			sourceTree = "<group>";
@@ -389,8 +389,8 @@
 				8E7D45A3200BBE8100EB1437 /* ContactsDatasource.swift in Sources */,
 				8E7D45A1200BBE7000EB1437 /* ContactsController.swift in Sources */,
 				8E7D456B200BB76F00EB1437 /* AppDelegate.swift in Sources */,
-				8E7D45AA200BD06300EB1437 /* EditContactDatasource.swift in Sources */,
 				8E7D45A8200BD04700EB1437 /* EditContactController.swift in Sources */,
+				8E7D45AE200C1CAE00EB1437 /* ContactCell.swift in Sources */,
 				8E7D45AC200BE47400EB1437 /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
