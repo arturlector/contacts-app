@@ -12,7 +12,7 @@ class ContactCell: DatasourceCell {
     
     override var datasourceItem: Any? {
         didSet {
-            guard let contact = datasourceItem as? Contact else { return }
+            guard let contact = datasourceItem as? MOContact else { return }
             
             nameLabel.text = (contact.firstName != nil ? contact.firstName! : "") + " " + (contact.lastName != nil ? contact.lastName! : "")
         }
@@ -48,5 +48,11 @@ class ContactCell: DatasourceCell {
     
     @objc func deleteContact(sender: UIBarButtonItem) {
         print("deleteContact")
+        
+        guard let contact = datasourceItem as? MOContact else { return }
+        
+        let contactsController = parentController as! ContactsController
+        contactsController.deleteContactFromScreen(contact: contact)
+        
     }
 }

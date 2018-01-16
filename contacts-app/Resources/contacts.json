@@ -15,7 +15,7 @@
     {
         "contactID": 2,
         "firstName": "Joe",
-        "lastName": "Black",
+        "lastName": "Black1",
         "phoneNumber": "+71231231212",
         "streetAddress1": "Pushkina str 5",
         "streetAddress2": "apt 1",
@@ -26,7 +26,7 @@
     {
         "contactID": 3,
         "firstName": "Joe",
-        "lastName": "Black",
+        "lastName": "Black2",
         "phoneNumber": "+71231231212",
         "streetAddress1": "Pushkina str 5",
         "streetAddress2": "apt 1",
@@ -37,7 +37,7 @@
     {
         "contactID": 4,
         "firstName": "Joe",
-        "lastName": "Black",
+        "lastName": "Black3",
         "phoneNumber": "+71231231212",
         "streetAddress1": "Pushkina str 5",
         "streetAddress2": "apt 1",
@@ -48,7 +48,7 @@
     {
         "contactID": 5,
         "firstName": "Joe",
-        "lastName": "Black",
+        "lastName": "Black4",
         "phoneNumber": "+71231231212",
         "streetAddress1": "Pushkina str 5",
         "streetAddress2": "apt 1",
@@ -59,7 +59,7 @@
     {
         "contactID": 6,
         "firstName": "Joe",
-        "lastName": "Black",
+        "lastName": "Black5",
         "phoneNumber": "+71231231212",
         "streetAddress1": "Pushkina str 5",
         "streetAddress2": "apt 1",
@@ -70,7 +70,7 @@
     {
         "contactID": 7,
         "firstName": "Joe",
-        "lastName": "Black",
+        "lastName": "Black6",
         "phoneNumber": "+71231231212",
         "streetAddress1": "Pushkina str 5",
         "streetAddress2": "apt 1",
@@ -81,7 +81,7 @@
     {
         "contactID": 8,
         "firstName": "Joe",
-        "lastName": "Black",
+        "lastName": "Black7",
         "phoneNumber": "+71231231212",
         "streetAddress1": "Pushkina str 5",
         "streetAddress2": "apt 1",
@@ -92,7 +92,7 @@
     {
         "contactID": 9,
         "firstName": "Joe",
-        "lastName": "Black",
+        "lastName": "Black8",
         "phoneNumber": "+71231231212",
         "streetAddress1": "Pushkina str 5",
         "streetAddress2": "apt 1",
@@ -103,7 +103,7 @@
     {
         "contactID": 10,
         "firstName": "Joe",
-        "lastName": "Black",
+        "lastName": "Black9",
         "phoneNumber": "+71231231212",
         "streetAddress1": "Pushkina str 5",
         "streetAddress2": "apt 1",
@@ -112,6 +112,6 @@
         "zipCode": "420001"
     },
     ],
-    "total" : 1,
-}
+    "total" : 10,
+    }
 }

@@ -20,6 +20,8 @@
 		8E7D45A8200BD04700EB1437 /* EditContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D45A7200BD04700EB1437 /* EditContactController.swift */; };
 		8E7D45AC200BE47400EB1437 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D45AB200BE47400EB1437 /* Contact.swift */; };
 		8E7D45AE200C1CAE00EB1437 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D45AD200C1CAE00EB1437 /* ContactCell.swift */; };
+		8E7D45B5200CA2BA00EB1437 /* ContactStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D45B4200CA2BA00EB1437 /* ContactStore.swift */; };
+		8E7D45B7200D003E00EB1437 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7D45B6200D003E00EB1437 /* Tools.swift */; };
 		E1345714AFD0427CDA967B74 /* Pods_contacts_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF30617B2E49CA0BFFD1F6B /* Pods_contacts_app.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		8E7D45A7200BD04700EB1437 /* EditContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactController.swift; sourceTree = "<group>"; };
 		8E7D45AB200BE47400EB1437 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		8E7D45AD200C1CAE00EB1437 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		8E7D45B4200CA2BA00EB1437 /* ContactStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactStore.swift; sourceTree = "<group>"; };
+		8E7D45B6200D003E00EB1437 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		99CE80184091AEF80B794595 /* Pods-contacts-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contacts-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-contacts-app/Pods-contacts-app.debug.xcconfig"; sourceTree = "<group>"; };
 		FDF30617B2E49CA0BFFD1F6B /* Pods_contacts_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_contacts_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -119,6 +123,7 @@
 				8E7D456A200BB76F00EB1437 /* AppDelegate.swift */,
 				8E7D459E200BBE3E00EB1437 /* Contacts */,
 				8E7D45A6200BCF8000EB1437 /* DetailContact */,
+				8E7D45B0200CA25F00EB1437 /* Services */,
 				8E7D459B200BB77F00EB1437 /* Resources */,
 			);
 			path = "contacts-app";
@@ -145,6 +150,7 @@
 		8E7D459B200BB77F00EB1437 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8E7D45B6200D003E00EB1437 /* Tools.swift */,
 				8E7D459C200BBA4300EB1437 /* contacts.json */,
 				8E7D456E200BB76F00EB1437 /* Main.storyboard */,
 				8E7D4574200BB76F00EB1437 /* Assets.xcassets */,
@@ -158,10 +164,9 @@
 		8E7D459E200BBE3E00EB1437 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				8E7D45A0200BBE7000EB1437 /* ContactsController.swift */,
-				8E7D45A2200BBE8100EB1437 /* ContactsDatasource.swift */,
-				8E7D45AB200BE47400EB1437 /* Contact.swift */,
-				8E7D45AD200C1CAE00EB1437 /* ContactCell.swift */,
+				8E7D45B2200CA27A00EB1437 /* Controller */,
+				8E7D45B1200CA27300EB1437 /* Model */,
+				8E7D45B3200CA28200EB1437 /* View */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -172,6 +177,39 @@
 				8E7D45A7200BD04700EB1437 /* EditContactController.swift */,
 			);
 			path = DetailContact;
+			sourceTree = "<group>";
+		};
+		8E7D45B0200CA25F00EB1437 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8E7D45B4200CA2BA00EB1437 /* ContactStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8E7D45B1200CA27300EB1437 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E7D45A2200BBE8100EB1437 /* ContactsDatasource.swift */,
+				8E7D45AB200BE47400EB1437 /* Contact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E7D45B2200CA27A00EB1437 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E7D45A0200BBE7000EB1437 /* ContactsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E7D45B3200CA28200EB1437 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E7D45AD200C1CAE00EB1437 /* ContactCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BF084039AEEEB6D6310A25DF /* Frameworks */ = {
@@ -391,6 +429,8 @@
 				8E7D456B200BB76F00EB1437 /* AppDelegate.swift in Sources */,
 				8E7D45A8200BD04700EB1437 /* EditContactController.swift in Sources */,
 				8E7D45AE200C1CAE00EB1437 /* ContactCell.swift in Sources */,
+				8E7D45B7200D003E00EB1437 /* Tools.swift in Sources */,
+				8E7D45B5200CA2BA00EB1437 /* ContactStore.swift in Sources */,
 				8E7D45AC200BE47400EB1437 /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

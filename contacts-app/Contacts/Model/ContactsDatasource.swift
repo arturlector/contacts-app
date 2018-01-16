@@ -11,18 +11,21 @@ import SwiftyJSON
 
 class ContactsDatasource: Datasource {
 
-    var contacts: [Contact] = []
+    var contacts: [MOContact] = []
     
     init(json: JSON) {
-        
         print(json["data"]["items"][0])
-        
         let contactsJsonArray = json["data"]["items"]
         
         for contactJson in contactsJsonArray {
-            let contact = Contact(json: contactJson.1)
-            contacts.append(contact)
+            //let contact = Contact(json: contactJson.1)
+            let contact = ContactStore.sharedInstance.createContact(json: contactJson.1)
+            contacts.append(contact!)
         }
+    }
+    
+    init(contacts: [MOContact]) {
+        self.contacts = contacts
     }
     
     override func item(_ indexPath: IndexPath) -> Any? {

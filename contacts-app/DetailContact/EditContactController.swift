@@ -10,17 +10,30 @@ import LBTAComponents
 
 class EditContactController: UIViewController, UITextFieldDelegate {
     
-    var contact: Contact? = nil
+    enum ContactField: Int {
+        case FirstName  = 0
+        case LastName   = 1
+        case Phone      = 2
+        case Address1   = 3
+        case Address2   = 4
+        case City       = 5
+        case State      = 6
+        case ZipCode    = 7
+        
+        static var count: Int { return ContactField.ZipCode.hashValue + 1}
+    }
+    
+    var contact: MOContact? = nil
     
     lazy var contactDataArray: [(String, String?)] = [
         ("First Name", contact?.firstName),
-        ("Last Name", contact!.lastName),
-        ("Phone", contact!.phoneNumber),
-        ("Address 1", contact!.streetAddress1),
-        ("Address 2", contact!.streetAddress2),
-        ("City", contact!.city),
-        ("State", contact!.state),
-        ("Zip code", contact!.zipCode)
+        ("Last Name", contact?.lastName),
+        ("Phone", contact?.phoneNumber),
+        ("Address 1", contact?.streetAddress1),
+        ("Address 2", contact?.streetAddress2),
+        ("City", contact?.city),
+        ("State", contact?.state),
+        ("Zip code", contact?.zipCode)
     ]
     
     var containerScrollView: UIScrollView? = nil
@@ -31,6 +44,8 @@ class EditContactController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor.lightGray
+        
         setupNavigationBar()
         
         generateViews()
@@ -40,9 +55,11 @@ class EditContactController: UIViewController, UITextFieldDelegate {
     
     func setupNavigationBar() {
         
-        let editBarButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.edit, target: self, action: #selector(editContact(sender:)))
+        let saveBarButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.save, target: self, action: #selector(saveContact(sender:)))
+        self.navigationItem.rightBarButtonItem = saveBarButton
         
-        self.navigationItem.rightBarButtonItem = editBarButton
+        let backBarButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToContacts(sender:)))
+        self.navigationItem.leftBarButtonItem = backBarButton
     }
     
     //MARK: - Configure
@@ -60,6 +77,7 @@ class EditContactController: UIViewController, UITextFieldDelegate {
                 containerTextField = item.textField
                 containerTextField!.tag = index
                 containerTextField?.delegate = self
+                
                 containerScrollView?.addSubview(item.view)
                 item.view.anchor(before.bottomAnchor, left: containerScrollView!.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: containerScrollView!.frame.width, heightConstant: 60)
                 before = item.view
@@ -77,6 +95,7 @@ class EditContactController: UIViewController, UITextFieldDelegate {
         
         let textField = UITextField()
         textField.text = value
+        textField.backgroundColor = .lightGray
         view.addSubview(textField)
         
         label.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: view.frame.width / 2, heightConstant: 0)
@@ -85,9 +104,43 @@ class EditContactController: UIViewController, UITextFieldDelegate {
         return (view, textField)
     }
     
+    //MARK: UITextFieldDelegate
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+
+        if let contactField = ContactField(rawValue: textField.tag) {
+            
+            switch contactField {
+                
+            case .FirstName:
+                contact?.firstName = textField.text
+            case .LastName:
+                contact?.lastName = textField.text
+            case .Phone:
+                contact?.phoneNumber = textField.text
+            case .Address1:
+                contact?.streetAddress1 = textField.text
+            case .Address2:
+                contact?.streetAddress2 = textField.text
+            case .City:
+                contact?.city = textField.text
+            case .State:
+                contact?.state = textField.text
+            case .ZipCode:
+                contact?.zipCode = textField.text
+            }
+        }
+    }
+    
     //MARK: - Events
     
-    @objc func editContact(sender: UIBarButtonItem) {
-        print("editContact")
+    @objc func saveContact(sender: UIBarButtonItem) {
+        
+        ContactStore.sharedInstance.saveContext()
+    }
+    
+    @objc func backToContacts(sender: UIBarButtonItem) {
+
+        self.navigationController?.popViewController(animated: true)
     }
 }
