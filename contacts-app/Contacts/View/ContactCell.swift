@@ -7,6 +7,7 @@
 //
 
 import LBTAComponents
+import UIKit
 
 class ContactCell: DatasourceCell {
     
@@ -41,7 +42,12 @@ class ContactCell: DatasourceCell {
         
         nameLabel.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 20, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
         
-        deleteButton.anchor(topAnchor, left: nil, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 70, heightConstant: 40)
+        deleteButton.anchor(topAnchor, left: nil, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 10, widthConstant: 70, heightConstant: 40)
+
+        let separator = UIView()
+        addSubview(separator)
+        separator.anchor(nameLabel.bottomAnchor, left: nil, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: frame.width, heightConstant: 1)
+        separator.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05)
     }
     
     //MARK: - Events

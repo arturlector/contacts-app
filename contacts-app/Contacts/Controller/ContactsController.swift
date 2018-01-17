@@ -8,6 +8,7 @@
 
 import LBTAComponents
 import SwiftyJSON
+import UIKit
 
 class ContactsController: DatasourceController {
     
@@ -17,7 +18,7 @@ class ContactsController: DatasourceController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView?.backgroundColor = .lightGray
+        collectionView?.backgroundColor = UIColor(red: 240, green: 240, blue: 240, alpha: 1)
         
         setupNavigationBar()
         configureData()
@@ -80,6 +81,11 @@ class ContactsController: DatasourceController {
     }
     
     func deleteContactFromScreen(contact: MOContact) {
+
+        if contact.contactID != nil {
+            ContactStore.sharedInstance.deleteContact(contactID: contact.contactID!)
+        }
+
         var contactsArray = contactsDatasource?.contacts
         let index = contactsArray?.index(of: contact)
         contactsArray?.remove(at: index!)

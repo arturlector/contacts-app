@@ -81,8 +81,6 @@ class ContactStore: NSObject {
         contact?.city =          " "
         contact?.zipCode =       " "
         
-        saveContext()
-        
         return contact
         
     }

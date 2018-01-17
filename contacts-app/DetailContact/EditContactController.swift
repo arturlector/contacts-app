@@ -98,7 +98,7 @@ class EditContactController: UIViewController, UITextFieldDelegate {
         textField.backgroundColor = .lightGray
         view.addSubview(textField)
         
-        label.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: view.frame.width / 2, heightConstant: 0)
+        label.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: view.frame.width / 2, heightConstant: 0)
         textField.anchor(view.topAnchor, left: label.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: view.frame.width / 2, heightConstant: 0)
         
         return (view, textField)
@@ -135,12 +135,11 @@ class EditContactController: UIViewController, UITextFieldDelegate {
     //MARK: - Events
     
     @objc func saveContact(sender: UIBarButtonItem) {
-        
         ContactStore.sharedInstance.saveContext()
     }
     
     @objc func backToContacts(sender: UIBarButtonItem) {
-
+        ContactStore.sharedInstance.context!.reset()
         self.navigationController?.popViewController(animated: true)
     }
 }
