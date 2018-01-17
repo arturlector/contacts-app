@@ -88,6 +88,9 @@ class ContactStore: NSObject {
     }
     
     func fetchAllContacts() -> [MOContact]?  {
+        
+        context?.reset()
+        
         var contacts:[MOContact]? = nil
         //var contact:MOContact? = nil
         

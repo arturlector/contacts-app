@@ -47,7 +47,6 @@ class EditContactController: UIViewController, UITextFieldDelegate {
         view.backgroundColor = UIColor.lightGray
         
         setupNavigationBar()
-        
         generateViews()
     }
     
@@ -105,7 +104,7 @@ class EditContactController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: UITextFieldDelegate
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
 
         if let contactField = ContactField(rawValue: textField.tag) {
@@ -135,12 +134,13 @@ class EditContactController: UIViewController, UITextFieldDelegate {
     //MARK: - Events
     
     @objc func saveContact(sender: UIBarButtonItem) {
+        self.view.endEditing(true)
         
         ContactStore.sharedInstance.saveContext()
     }
     
     @objc func backToContacts(sender: UIBarButtonItem) {
-
+        
         self.navigationController?.popViewController(animated: true)
     }
 }

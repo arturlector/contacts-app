@@ -62,6 +62,7 @@ class ContactsController: DatasourceController {
     }
     
     func fetchContactsFromDB() {
+        
         let contacts = ContactStore.sharedInstance.fetchAllContacts()
         contactsDatasource = ContactsDatasource(contacts: contacts!)
         self.datasource = contactsDatasource
