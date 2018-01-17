@@ -81,10 +81,7 @@ class ContactStore: NSObject {
         contact?.city =          " "
         contact?.zipCode =       " "
         
-        saveContext()
-        
         return contact
-        
     }
     
     func fetchAllContacts() -> [MOContact]?  {
@@ -126,7 +123,6 @@ class ContactStore: NSObject {
         } catch { }
         
         saveContext()
-        
     }
     
     func updateContact(contactID: String) {

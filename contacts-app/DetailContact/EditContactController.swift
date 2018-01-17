@@ -44,7 +44,8 @@ class EditContactController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.lightGray
+        view.backgroundColor = UIColor(red: 240, green: 240, blue: 240, alpha: 1)
+        
         
         setupNavigationBar()
         generateViews()
@@ -57,7 +58,8 @@ class EditContactController: UIViewController, UITextFieldDelegate {
         let saveBarButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.save, target: self, action: #selector(saveContact(sender:)))
         self.navigationItem.rightBarButtonItem = saveBarButton
         
-        let backBarButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToContacts(sender:)))
+        let backBarButton = UIBarButtonItem(title: "< Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(backToContacts(sender:)))
+        
         self.navigationItem.leftBarButtonItem = backBarButton
     }
     
@@ -79,6 +81,12 @@ class EditContactController: UIViewController, UITextFieldDelegate {
                 
                 containerScrollView?.addSubview(item.view)
                 item.view.anchor(before.bottomAnchor, left: containerScrollView!.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: containerScrollView!.frame.width, heightConstant: 60)
+                
+                let separator = UIView()
+                containerScrollView?.addSubview(separator)
+                separator.anchor(item.view.bottomAnchor, left: nil, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: containerScrollView!.frame.width, heightConstant: 1)
+                separator.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.05)
+                
                 before = item.view
             }
         }
@@ -94,11 +102,13 @@ class EditContactController: UIViewController, UITextFieldDelegate {
         
         let textField = UITextField()
         textField.text = value
-        textField.backgroundColor = .lightGray
+        textField.borderStyle = .roundedRect
+        textField.backgroundColor = UIColor(r: 240, g: 240, b: 240)
+        //textField.layer.cornerRadius = 6
         view.addSubview(textField)
         
-        label.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: view.frame.width / 2, heightConstant: 0)
-        textField.anchor(view.topAnchor, left: label.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: view.frame.width / 2, heightConstant: 0)
+        label.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: view.frame.width / 2, heightConstant: 0)
+        textField.anchor(view.topAnchor, left: label.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: view.frame.width / 2 - 40, heightConstant: 0)
         
         return (view, textField)
     }
@@ -135,12 +145,10 @@ class EditContactController: UIViewController, UITextFieldDelegate {
     
     @objc func saveContact(sender: UIBarButtonItem) {
         self.view.endEditing(true)
-        
         ContactStore.sharedInstance.saveContext()
     }
     
     @objc func backToContacts(sender: UIBarButtonItem) {
-        
-        self.navigationController?.popViewController(animated: true)
+    self.navigationController?.popViewController(animated: true)
     }
 }
