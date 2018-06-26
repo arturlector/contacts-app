@@ -95,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E1B509620E28A9A00B4E1EC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8E7D459E200BBE3E00EB1437 /* Contacts */,
+				8E7D45A6200BCF8000EB1437 /* DetailContact */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		8E7D455E200BB76F00EB1437 = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				8E7D456A200BB76F00EB1437 /* AppDelegate.swift */,
-				8E7D459E200BBE3E00EB1437 /* Contacts */,
-				8E7D45A6200BCF8000EB1437 /* DetailContact */,
+				8E1B509620E28A9A00B4E1EC /* Modules */,
 				8E7D45B0200CA25F00EB1437 /* Services */,
 				8E7D459B200BB77F00EB1437 /* Resources */,
 			);
